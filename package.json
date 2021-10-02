@@ -1,0 +1,33 @@
+{
+  "name": "solicitudes-univirtual",
+  "version": "0.0.1",
+  "private":true,
+  "description": "Based on Clickup API Services. Ticket handler for internal use in Univirtual's teams",
+  "main": "index.js",
+  "workspaces":[
+    "next-solicitudes",
+    "react-solicitudes"
+  ],
+  "scripts": {
+    "build":"npm run build --workspace=react-solicitudes && npm run build --workspace=next-solicitudes",
+    "start":"npm start --workspace=react-solicitudes && npm start --workspace=next-solicitudes",
+    "react": "npm start --workspace=react-solicitudes",
+    "next": "npm start --workspace=next-solicitudes",
+    "build:react":"npm run build --workspace=react-solicitudes",
+    "build:next":"npm run build --workspace=next-solicitudes",
+    "lint": "npm run lint --workspace=next-solicitudes"
+
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "author": "Jhon Alexander Agudelo",
+  "license": "UNLICENSED"
+}
