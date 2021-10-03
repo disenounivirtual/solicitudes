@@ -10,9 +10,9 @@
   ],
   "scripts": {
     "build":"npm run build --workspace=react-solicitudes && npm run build --workspace=next-solicitudes",
-    "start":"npm start --workspace=react-solicitudes && npm start --workspace=next-solicitudes",
-    "react": "npm start --workspace=react-solicitudes",
-    "next": "npm start --workspace=next-solicitudes",
+    "start":"npm run start --workspace=react-solicitudes && npm dev --workspace=next-solicitudes",
+    "react": "npm run start --workspace=react-solicitudes",
+    "next": "npm run dev --workspace=next-solicitudes",
     "build:react":"npm run build --workspace=react-solicitudes",
     "build:next":"npm run build --workspace=next-solicitudes",
     "lint": "npm run lint --workspace=next-solicitudes"

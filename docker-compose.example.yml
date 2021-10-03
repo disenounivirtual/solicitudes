@@ -1,0 +1,33 @@
+version: "3.8"
+services:
+  react:
+    container_name: "frontend_react"
+    build:
+      context: .
+      dockerfile: DockerfileDev
+    command: yarn react -p 3000 -host 0.0.0.0
+    ports:
+      - "3000:3000"
+    networks:
+      - frontend_network
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+  next:
+    container_name: "frontend_next"
+    build:
+      context: .
+      dockerfile: DockerfileDev
+    command: yarn next
+    ports:
+      - "4000:4000"
+    networks:
+      - frontend_network
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+  
+networks:
+  frontend_network:
+    driver: bridge    
