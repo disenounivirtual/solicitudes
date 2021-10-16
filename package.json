@@ -9,6 +9,9 @@
     "react-solicitudes"
   ],
   "scripts": {
+    "init:b":"docker-compose up --build",
+    "init:d":"docker-compose up -d",
+    "init":"docker-compose up",
     "build":"npm run build --workspace=react-solicitudes && npm run build --workspace=next-solicitudes",
     "start":"npm run start --workspace=react-solicitudes && npm dev --workspace=next-solicitudes",
     "react": "npm run start --workspace=react-solicitudes",
