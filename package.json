@@ -14,7 +14,8 @@
     "build": "npm run build --workspace=next-solicitudes",
     "next": "npm run dev --workspace=next-solicitudes",
     "build:next": "npm run build --workspace=next-solicitudes",
-    "lint": "npm run lint --workspace=next-solicitudes"
+    "lint": "npm run lint --workspace=next-solicitudes",
+    "test": "jest --watch"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.14.1",
