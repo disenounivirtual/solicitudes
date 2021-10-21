@@ -1,29 +1,30 @@
 {
   "name": "solicitudes-univirtual",
   "version": "0.0.1",
-  "private":true,
+  "private": true,
   "description": "Based on Clickup API Services. Ticket handler for internal use in Univirtual's teams",
   "main": "index.js",
-  "workspaces":[
-    "next-solicitudes",
-    "react-solicitudes"
+  "workspaces": [
+    "next-solicitudes"
   ],
   "scripts": {
-    "init:b":"docker-compose up --build",
-    "init:d":"docker-compose up -d",
-    "init":"docker-compose up",
-    "build":"npm run build --workspace=react-solicitudes && npm run build --workspace=next-solicitudes",
-    "start":"npm run start --workspace=react-solicitudes && npm dev --workspace=next-solicitudes",
-    "react": "npm run start --workspace=react-solicitudes",
+    "init:b": "docker-compose up --build",
+    "init:d": "docker-compose up -d",
+    "init": "docker-compose up",
+    "build": "npm run build --workspace=next-solicitudes",
     "next": "npm run dev --workspace=next-solicitudes",
-    "build:react":"npm run build --workspace=react-solicitudes",
-    "build:next":"npm run build --workspace=next-solicitudes",
+    "build:next": "npm run build --workspace=next-solicitudes",
     "lint": "npm run lint --workspace=next-solicitudes"
-
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "babel-jest": "^27.3.1",
     "eslint": "7.32.0",
-    "eslint-config-next": "11.1.2"
+    "eslint-config-next": "11.1.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.3.1",
+    "react-test-renderer": "^17.0.2"
   },
   "eslintConfig": {
     "extends": [
